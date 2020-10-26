@@ -9,5 +9,5 @@ router.get("/", tutorController.getTutor);
 router.post("/", tutorController.create);
 
 // Delete tutor
-// router.delete("/:_id", tutorController.delete);
+router.delete("/:id", tutorController.delete);
 module.exports = router;

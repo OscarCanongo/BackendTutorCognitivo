@@ -37,24 +37,24 @@ exports.create = (req, res) => {
 
 
 // delete
-// exports.delete = (req, res) => {
-//     const id = req.params.id;
+exports.delete = (req, res) => {
+    const id = req.params.id;
   
-//     Tutor.findByIdAndRemove(id)
-//       .then(data => {
-//         if (!data) {
-//           res.status(404).send({
-//             message: `No se puede borrar`
-//           });
-//         } else {
-//           res.send({
-//             message: "Borrado exitosos"
-//           });
-//         }
-//       })
-//       .catch(err => {
-//         res.status(500).send({
-//           message: "No se puede borar el tutor=" + id
-//         });
-//       });
-//   };
+    Tutor.findByIdAndRemove(id)
+      .then(data => {
+        if (!data) {
+          res.status(404).send({
+            message: `No se puede borrar`
+          });
+        } else {
+          res.send({
+            message: "Borrado exitosos"
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "No se puede borar el tutor=" + id
+        });
+      });
+  };
