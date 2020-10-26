@@ -87,7 +87,7 @@ exports.update = async (req, res) => {
 
         //Update
         dominio = await Dominio.findByIdAndUpdate({ _id: req.params.id }, { $set: nuevoDominio }, { new: true });
-        res.json({msg; 'Dominio actualizado correctamente'});
+        res.json({msg: 'Dominio actualizado correctamente'});
         res.json({dominio});
     }catch (error) {
         console.log(error);

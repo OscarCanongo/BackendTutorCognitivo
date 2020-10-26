@@ -21,6 +21,7 @@ const port = process.env.PORT || 4000
 
 //Importar rutas
 app.use('/tutor', require('./routes/tutor'));
+app.use('/dominio', require('./routes/dominio'));
 
 //Arrancar server
 app.listen(port, '0.0.0.0', () => {
