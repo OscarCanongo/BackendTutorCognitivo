@@ -58,3 +58,30 @@ exports.delete = (req, res) => {
         });
       });
   };
+
+//   update
+
+
+exports.update = (req, res) => {
+    if (!req.body) {
+      return res.status(400).send({
+        message: "No se puede actualizar, información vacía!"
+      });
+    }
+  
+    const id = req.params.id;
+  
+    Tutor.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+      .then(data => {
+        if (!data) {
+          res.status(404).send({
+            message: `No se encontró el tutor`
+          });
+        } else res.send({ message: "Tutor actualizado correctamente" });
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Error al actualizat el tutor con id:" + id
+        });
+      });
+  };

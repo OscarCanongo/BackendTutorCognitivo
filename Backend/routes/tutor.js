@@ -10,4 +10,8 @@ router.post("/", tutorController.create);
 
 // Delete tutor
 router.delete("/:id", tutorController.delete);
+
+// Update tutor
+router.put("/:id", tutorController.update);
+
 module.exports = router;
