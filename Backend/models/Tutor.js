@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const TutorSchema = mongoose.Schema({
     materia: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Materia',
       require: true
     },
     pregunta: {
