@@ -23,6 +23,8 @@ const port = process.env.PORT || 4000
 app.use('/tutor', require('./routes/tutor'));
 app.use('/dominio', require('./routes/dominio'));
 app.use('/materia', require('./routes/materia'));
+app.use('/signup', require('./routes/usuarios'));
+app.use('/login', require('./routes/auth'));
 
 //Arrancar server
 app.listen(port, '0.0.0.0', () => {
