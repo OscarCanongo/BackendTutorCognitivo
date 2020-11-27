@@ -4,15 +4,23 @@ const tutorController = require("../controllers/tutorController");
 const auth = require ('../middleware/auth');
 
 //Get Tutor
-router.get("/", auth, tutorController.getTutor);
+router.get("/", 
+//auth, 
+tutorController.getTutor);
 
 // Post tutor
-router.post("/", auth, tutorController.create);
+router.post("/", 
+//auth, 
+tutorController.create);
 
 // Delete tutor
-router.delete("/:id", auth, tutorController.delete);
+router.delete("/:id", 
+//auth, 
+tutorController.delete);
 
 // Update tutor
-router.put("/:id", auth, tutorController.update);
+router.put("/:id", 
+//auth, 
+tutorController.update);
 
 module.exports = router;
