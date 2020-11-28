@@ -5,11 +5,6 @@ const TemaSchema = mongoose.Schema({
       type: String,
       require: true
     },
-    problemas: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Problema',
-      require: true
-    }],
 });
 
 module.exports = mongoose.model('Tema', TemaSchema);

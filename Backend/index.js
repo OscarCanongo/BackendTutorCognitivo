@@ -27,6 +27,7 @@ app.use('/signup', require('./routes/usuarios'));
 app.use('/login', require('./routes/auth'));
 app.use('/taxonomia', require('./routes/taxonomia'));
 app.use('/problema', require('./routes/problema'));
+app.use('/tutor', require('./routes/tutor'));
 
 
 //Arrancar server

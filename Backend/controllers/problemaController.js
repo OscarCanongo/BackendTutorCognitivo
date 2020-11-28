@@ -12,25 +12,23 @@ exports.getProblema = async (req, res) => {
 };
 
 // Post
-exports.create = (req, res) => {
-  const problema = new Problema({
-    descripcion: req.body.descripcion,
-    preguntas: req.body.preguntas
-  });
-
-//guarda el problema en la db   
-  problema.save(problema)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Error al tratar de guardar el problema."
-      });
-    });
-
-};
+exports.create = async (req, res) => {
+ 
+  const problema = new Problema(req.body);
+  
+  //guarda la taxonomia en la db   
+   try{
+      await problema.save();
+  
+      //Todo bien
+      res.json({ msg: 'Problema creado correctamente' });
+  
+  
+   }catch (error) {
+      console.log(error);
+      res.status(500).send("Hubo un error");
+    }
+  };
 
 
 // delete
