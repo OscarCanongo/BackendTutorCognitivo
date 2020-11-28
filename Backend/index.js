@@ -26,6 +26,8 @@ app.use('/materia', require('./routes/materia'));
 app.use('/signup', require('./routes/usuarios'));
 app.use('/login', require('./routes/auth'));
 app.use('/taxonomia', require('./routes/taxonomia'));
+app.use('/problema', require('./routes/problema'));
+
 
 //Arrancar server
 app.listen(port, '0.0.0.0', () => {
