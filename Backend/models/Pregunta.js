@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-const TutorSchema = mongoose.Schema({
-    materia: {
+const PreguntaSchema = mongoose.Schema({
+    taxonomia: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'Materia',
+      ref: 'Taxonomia',
       require: true
     },
     pregunta: {
@@ -16,5 +16,5 @@ const TutorSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Tutor', TutorSchema);
+module.exports = mongoose.model('Pregunta', PreguntaSchema);
 

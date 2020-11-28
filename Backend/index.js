@@ -20,7 +20,7 @@ app.use(express.json({ extended: true}));
 const port = process.env.PORT || 4000
 
 //Importar rutas
-app.use('/tutor', require('./routes/tutor'));
+app.use('/pregunta', require('./routes/pregunta'));
 app.use('/dominio', require('./routes/dominio'));
 app.use('/materia', require('./routes/materia'));
 app.use('/signup', require('./routes/usuarios'));
